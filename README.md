@@ -42,4 +42,4 @@ Instead, it is stored in **Windows Credential Manager**.
 Run the following command in **Command Prompt**:
 
 ```cmd
-cmdkey /add:FGT_API /user:anything /pass:YOUR_API_TOKEN
+cmdkey /generic:FGT_API /user:anything /pass:YOUR_API_TOKEN
