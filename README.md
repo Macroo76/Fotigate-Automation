@@ -22,6 +22,10 @@ The tool performs the following automation tasks:
 4. **Firewall Policy Configuration**
    - Adds required Phase 2 VPN policies automatically.
 
+5. **Rollback Functionality**
+   - Automatically restores the previous state if deployment fails
+   - Deletes all successfully created objects in reverse order
+   - Prevents partial or broken VPN configurations after errors
 ---
 
 ## 🔐 Authentication
