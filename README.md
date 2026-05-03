@@ -1,13 +1,41 @@
-# Fotigate-Automation
+# FortiGate Automation Tool
 
-this tool will automate the Remote Disktop access VPN in fortigate firewall it includes:
+This project automates the configuration of a **Remote Desktop VPN setup** on a FortiGate firewall using the FortiGate API.
 
-1_ creating the IP POOL for the VPN Clients if not exists.
-2_ adding the adress group for the destinations if not exists.
-3_ it creates the user group for the xauth.
-4_ it automatically adds the nessary policies for the Phase2.
+It reduces manual configuration by automatically creating required objects and policies if they do not already exist.
 
-it uses API token for the auth and for security the API token should be increpted and stored using windows Credential Manager under the name FGT_API using the following cmd command:
+---
 
-cmd >>>>>>>>>   cmdkey /add:FGT_API /user:anything /pass:YOUR_API_TOKEN
+## 🚀 Features
 
+The tool performs the following automation tasks:
+
+1. **IP Pool Management**
+   - Creates the VPN client IP pool if it does not already exist.
+
+2. **Address Group Setup**
+   - Creates destination address groups when missing.
+
+3. **User Group Creation**
+   - Automatically creates the XAUTH user group.
+
+4. **Firewall Policy Configuration**
+   - Adds required Phase 2 VPN policies automatically.
+
+---
+
+## 🔐 Authentication
+
+This tool uses a **FortiGate API token** for authentication.
+
+For security, the API token is **not stored in plaintext**.  
+Instead, it is stored in **Windows Credential Manager**.
+
+---
+
+## 💾 Storing the API Token (Windows)
+
+Run the following command in **Command Prompt**:
+
+```cmd
+cmdkey /add:FGT_API /user:anything /pass:YOUR_API_TOKEN
