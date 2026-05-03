@@ -1,0 +1,28 @@
+## 🧭 Steps to Use This Automation Script
+
+Follow these steps to properly set up and run the FortiGate VPN automation tool:
+
+---
+
+### 1. 🔐 Create a REST API Token
+
+Create a **REST API token** on the FortiGate firewall with the required privileges to:
+
+- Create VPN configurations
+- Create firewall policies
+- Manage address objects and groups
+
+Ensure the token has **read/write access** to VPN and firewall sections.
+
+---
+
+### 2. 💾 Store the Token Securely (Windows Credential Manager)
+
+For security reasons, the API token should NOT be hardcoded.
+
+Instead, store it in Windows Credential Manager.
+
+Run the following command in **Command Prompt (as Administrator):**
+
+```cmd
+cmdkey /add:FGT_API /user:anything /pass:YOUR_API_TOKEN
